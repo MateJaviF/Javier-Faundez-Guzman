@@ -1,0 +1,113 @@
+body{
+    background-color: black;
+    background-image: url(data/wallpaper.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.master{
+    background-color: rgba(250, 250, 250, 0.5);
+    border-radius: 1pc;
+    display: contents;
+}
+.textthatneedsamargin{
+    margin: 15px;
+}
+.topbar{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    border-radius: 1pc;
+    position: relative;
+    top: -8px;
+    width: 101.3%;
+    left: -8px;
+}
+.toptitle{
+    margin-left: 15px;
+    margin-right: 5px;
+}
+.toplinks{
+    color: white;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+}
+a{
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.boxes{
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.card{
+    size-adjust: 50%;
+}
+.cardtop{
+    background-color:  blueviolet;
+    border-radius: 1pc;
+    width: 600px;
+    height: 100px;
+}
+img{
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: calc(50% - 60px);
+    height: 40%;
+    width: 125px;
+}
+.cardbottom{
+    background-color: rgb(245, 245, 245);
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    border-radius: 1pc;
+    top: -25px;
+}
+.textcard{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.box{
+    width: 400px;
+    height: 405px;
+}
+.skills{
+    background-color: white;
+    border-radius: 1pc;
+    width: 400px;
+    height: 180px;
+}
+.socialnetworks{
+    background-color: white;
+    border-radius: 1pc;
+    width: 400px;
+    height: 180px;
+}
+.proyects{
+    display: inline-block;
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    border-radius: 1pc;
+    text-align: center;
+    align-items: center;
+}
+.allricopanlogo{
+    background-image: url(data/AllRicoPanLogo.png);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}

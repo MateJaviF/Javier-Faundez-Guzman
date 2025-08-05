@@ -7,9 +7,8 @@ body{
     background-attachment: fixed;
 }
 .master{
-    background-color: rgba(250, 250, 250, 0.5);
+    background-color: rgba(125, 125, 125, 0.5);
     border-radius: 1pc;
-    display: contents;
 }
 .textthatneedsamargin{
     margin: 15px;
@@ -22,8 +21,7 @@ body{
     border-radius: 1pc;
     position: relative;
     top: -8px;
-    width: 101.3%;
-    left: -8px;
+    width: auto;
 }
 .toptitle{
     margin-left: 15px;
@@ -97,17 +95,16 @@ img{
     height: 180px;
 }
 .proyects{
-    display: inline-block;
-    background-color: white;
+    display: inline-flexbox;
     width: 300px;
-    height: 200px;
+    height: 300px;
     border-radius: 1pc;
     text-align: center;
     align-items: center;
 }
-.allricopanlogo{
-    background-image: url(data/AllRicoPanLogo.png);
+.allricopandiv{
+    background-color: white;    
+    border-radius: 1pc;
+    width: 300px;
     height: 200px;
-    width: 200px;
-    border-radius: 50%;
 }

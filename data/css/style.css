@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
    margin: 0;
    padding: 0;
@@ -16,11 +18,10 @@ body {
 #nav-bar {
     background-color: #000000;
     display: flex;
-    padding: 15px 15px;
+    padding: 10px 10px;
     justify-content: space-between;
     align-items: center;
-    width: auto;
-    height: auto;
+    overflow: hidden;
 }
 
 .bar-logo {
@@ -35,6 +36,8 @@ body {
    display: flex;
    align-items: center;
    border-radius: 5px;
+   gap: 5px;
+   overflow: hidden;
 }
 
 .bar-logo a:hover {
@@ -54,6 +57,7 @@ body {
 
 .bar-links {
    display: flex;
+   overflow: hidden;
    gap: 5px;
    text-align: center;
 }
@@ -64,6 +68,7 @@ body {
    font-size: 18px;
    padding: 8px 8px;
    border-radius: 5px;
+   border: 1px white solid;
 }
 
 .bar-links a:hover {
@@ -73,16 +78,32 @@ body {
 
 #contenedor {
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     gap: 20px;
 }
 
 #master {
-    margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.masters-titles {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px 10px;
+}
+#master-container {
     display: flex;
+    overflow: hidden;
     gap: 20px;
     padding: 10px 10px;
+    margin-top: 20px;
+    align-items: center;
 }
 
 .master-box1 {
@@ -224,6 +245,7 @@ body {
 
 .contacts-links {
     display: flex;
+    overflow: hidden;
     gap: 10px;
     flex-direction: column;
     margin-left: 10px;
@@ -249,7 +271,7 @@ body {
     #contenedor {
         flex-direction: column;
     }
-    #master {
+    #master-container {
         flex-direction: column;
         padding: 0;
     }
@@ -258,6 +280,9 @@ body {
 @media (max-width: 500px) {
     #nav-bar {
         flex-direction: column;
+    }
+    #master-container {
+        align-items: normal;
     }
 }
 
@@ -268,17 +293,9 @@ body {
     border-radius: 10px;
 }
 
-.proyects-title {
-    background-color: #000000;
-    color: #fff;
-    text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 10px 10px;
-}
-
 .proyects {
     display: flex;
+    overflow: hidden;
     flex-direction: row;
     border-radius: 10px;
     justify-content: space-around;
@@ -294,6 +311,7 @@ body {
     padding: 10px;
     text-align: center;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -301,6 +319,7 @@ body {
     border-radius: 10px;
     order: 1;
     flex-basis: 50%;
+    max-width: 400px;
 }
 
 #allricopanlogo {
@@ -311,6 +330,7 @@ body {
     padding: 10px;
     text-align: center;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -318,6 +338,7 @@ body {
     border-radius: 10px;
     order: 2;
     flex-basis: 50%;
+    max-width: 400px;
 }
 
 .proyects-button {
@@ -346,6 +367,7 @@ body {
     width: auto;
     height: auto;
     display: flex;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
 }
@@ -391,4 +413,8 @@ body {
 
 #change1-2 {
     background-color: rgb(150, 0, 140);
+}
+
+#change1-3 {
+    background-color: rgb(140, 0, 130);
 }

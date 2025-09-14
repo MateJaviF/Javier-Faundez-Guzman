@@ -17,28 +17,15 @@
 </head>
 <body>
 
-<nav id="nav-bar">
-    <div class="bar-logo">
-        <a href="data/pdf/Curriculum - JEFG.pdf">
-            <i class="bi-person-circle"></i>
-            <h1>Página de Javier Faúndez Guzmán</h1>
-        </a>
-    </div>
-    <div class="bar-links">
-        <a href="#">Sobre mí</a>
-        <a href="#">Proyectos Destacados</a>
-        <a href="#">Changelog</a>
-    </div>
-</nav>
 <div id="contenedor">
     <div id="master">
-        <div class="masters-titles">
+        <div class="masters-titles darkmode">
             <h2>Sobre mí</h2>
         </div>
         <div id="master-container">
             <div class="master-box1">
                 <div class="cardtop"></div>
-                <div class="cardbottom">
+                <div class="cardbottom darkmode">
                     <img src="data/images/image_profile.jpg" id="image-profile">
                     <div id="h2profile">
                         <h2>¡Hola! Soy Javier Esteban Faúndez Guzmán</h2>
@@ -52,7 +39,7 @@
             </div>
 
             <div id="master-box2">
-                <div class="skills">
+                <div class="skills darkmode">
                     <h2>Habilidades</h2>
                     <ul>
                         <li>Desarrollo Web (HTML y CSS).</li>
@@ -60,7 +47,7 @@
                         <li>Programador (JavaScript, JSON, LUA).</li>
                     </ul>
                 </div>
-                <div class="interests">
+                <div class="interests darkmode">
                     <h2>Intereses</h2>
                     <ul>
                         <li>Desarrollo de Videojuegos</li>
@@ -70,7 +57,7 @@
                     </ul>
                 </div>
             </div>
-            <div id="master-box3">
+            <div id="master-box3" class="darkmode">
                 <div class="contacts">
                     <h2>Contactos</h2>
                     <div class="contacts-links">
@@ -96,18 +83,18 @@
 
 
     <div id="master2">
-        <div class="masters-titles">
+        <div class="masters-titles darkmode">
             <h2>Proyectos Destacados</h2>
         </div>
         <div class="proyects">
             
-            <div class="allricopan-box">
+            <div class="allricopan-box darkmode">
                 <h3 class="textthatneedsamargin">Página Web: All Rico Pan [En proceso...]</h3>
                 <p class="textthatneedsamargin">Una página web básica para la panaderia de mi familia.</p>
                 <img src="data/images/AllRicoPanLogo.jpg" height="200px" width="200px" id="allricopanlogo">
                 <a href="#" class="proyects-button">Ir al Sitio</a>
             </div>
-            <div class="almacebred-box">
+            <div class="almacebred-box darkmode">
                 <h3 class="textthatneedsamargin">Página Web: Almaceb RED [En estado de BETA]</h3>
                 <p class="textthatneedsamargin">Una página web geografica con diseño de red social (Tiktok).</p>
                 <img src="data/images/AlmacebREDLogo.png" height="200px" width="200px" id="almacebredlogo">
@@ -172,9 +159,89 @@
                     <li>Divs de proyects destacados modificados.</li>
                 </ul>
             </div>
+            <div id="change1-4">
+                <h3>Versión 1.4</h3>
+                <ul>
+                    <li>MODO OSCURO AÑADIDO (Y fijado en la esquina).</li>
+                    <li>+ API para que el modo oscuro se guarde dependiendo que eliges.</li>
+                    <li>Barra de navegación fijada.</li>
+                    <li>Fondos de los cambios de actualización ahora en degradados.</li>
+                    <li>Ahora todos los fondos son blancos a menos que actives el modo oscuro (🔥).</li>
+                    <li>Barra de navegación arreglada.</li>
+                </ul>
+            </div>
+        <!--<div id="change1-5">
+                <h3>Versión 1.5</h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>-->
+        <!--<div id="change1-6">
+                <h3>Versión 1.6</h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>-->
         </div> 
     </div>
+    
+    <nav id="nav-bar" class="darkmode">
+        <div class="bar-logo">
+            <a href="data/pdf/Curriculum - JEFG.pdf">
+                <i class="bi-person-circle"></i>
+                <h1>Página de Javier Faúndez Guzmán</h1>
+            </a>
+        </div>
+        <div class="bar-links">
+            <a href="#">Sobre mí</a>
+            <a href="#">Proyectos Destacados</a>
+            <a href="#">Changelog</a>
+        </div>
+    </nav>
+
+    <div id="btnToggle" class="darkmode">
+        <button onclick="">🔥</button>
+    </div>
 </div>
+
+<script>
+    const btn = document.getElementById('btnToggle');
+    const elementos = document.querySelectorAll('.darkmode');
+    const STORAGE_KEY = "darkmode-activo";
+
+    function toggleDarkMode() {
+        const activo = elementos[0].classList.contains("invertido"); 
+        if (activo) {
+        // Si está activo: desactivar
+        elementos.forEach(el => el.classList.remove("invertido"));
+        localStorage.setItem(STORAGE_KEY, "no");
+        } else {
+        // Si no está activo: activar
+        elementos.forEach(el => el.classList.add("invertido"));
+        localStorage.setItem(STORAGE_KEY, "sí");
+        }
+    }
+
+    btn.addEventListener('click', toggleDarkMode);
+
+    // Save preference API
+    window.addEventListener('DOMContentLoaded', () => {
+        const preferencia = localStorage.getItem(STORAGE_KEY);
+        if (preferencia === "sí") {
+        elementos.forEach(el => el.classList.add("invertido"));
+        }
+    });
+</script>
 
 </body>
 </html>

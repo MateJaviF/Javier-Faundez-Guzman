@@ -12,9 +12,53 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    transition: filter 0.3s ease;
+
 }
+
+.darkmode {
+    transition: filter 0.3s ease;
+}
+
+    /* Cuando está activo el modo oscuro, solo los elementos con clase "darkmode" se invierten */
+.darkmode.invertido {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+    /* Si quieres que imágenes dentro de .darkmode no se vean raras */
+.darkmode.invertido img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+#btnToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    z-index: 9999; 
+}
+
+#btnToggle button {
+    padding: 10px 10px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
 #nav-bar {
-    background-color: #000000;
+    position: fixed;
+    background-color: #ffffff;
     display: flex;
     padding: 10px 10px;
     justify-content: space-between;
@@ -27,7 +71,7 @@ body {
 }
 
 .bar-logo a {
-   color: #fff;
+   color: #000000;
    text-decoration: none;
    font-size: 20px;
    text-transform: uppercase;
@@ -40,13 +84,13 @@ body {
 
 .bar-logo a:hover {
     background-color: #fff;
-    color: #000000;
+    filter: invert(1);
 }
 
 .bar-logo i {
    margin-right: 5px;
    font-size: 28px;
-   color: #fff;
+   color: #000000;
 }
 
 .bar-logo h1 {
@@ -58,21 +102,24 @@ body {
    overflow: hidden;
    gap: 5px;
    text-align: center;
+   align-items: center;
 }
 
 .bar-links a {
-   color: #fff;
-   text-decoration: none;
-   font-size: 18px;
-   padding: 8px 8px;
-   border-radius: 5px;
-   border: 1px white solid;
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 8px;
+    border-radius: 10px;
+    border: 1px black solid;
 }
 
 .bar-links a:hover {
-   background-color: #fff;
-   color: #000000;
+    background-color: #fff;
+    filter: invert(1);
 }
+
+
 
 #contenedor {
     display: flex;
@@ -82,14 +129,16 @@ body {
 }
 
 #master {
+    display: flex;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
+    margin-top: 125px;
     border-radius: 10px;
 }
 
 .masters-titles {
-    background-color: #000000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
     text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -313,7 +362,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffffef;
+    background-color: #ffffffff;
     border-radius: 10px;
     order: 1;
     flex-basis: 50%;
@@ -332,7 +381,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffffef;   
+    background-color: #ffffffff;   
     border-radius: 10px;
     order: 2;
     flex-basis: 50%;
@@ -402,17 +451,36 @@ body {
 }
 
 #change1-0 {
-    background-color: rgb(170, 0, 160);
+    /*rgb(170, 0, 160)*/
+    background: linear-gradient(to bottom, rgb(170, 0, 160), rgb(160, 0, 150));
 }
 
 #change1-1 {
-    background-color: rgb(160, 0, 150);
+    /*rgb(160, 0, 150)*/
+    background: linear-gradient(to bottom, rgb(160, 0, 150), rgb(150, 0, 140));
 }
 
 #change1-2 {
-    background-color: rgb(150, 0, 140);
+    /*rgb(150, 0, 140)*/
+    background: linear-gradient(to bottom, rgb(150, 0, 140), rgb(140, 0, 130));
 }
 
 #change1-3 {
-    background-color: rgb(140, 0, 130);
+    /*rgb(140, 0, 130)*/
+    background: linear-gradient(to bottom, rgb(140, 0, 130), rgb(130, 0, 120));
+}
+
+#change1-4 {
+    /*rgb(130, 0, 120)*/
+    background: linear-gradient(to bottom, rgb(130, 0, 120), rgb(120, 0, 110));
+}
+
+#change1-5 {
+    /*rgb(120, 0, 110)*/
+    background: linear-gradient(to bottom, rgb(120, 0, 110), rgb(110, 0, 100));
+}
+
+#change1-6 {
+    /*rgb(110, 0, 100)*/
+    background: linear-gradient(to bottom, rgb(110, 0, 100), rgb(100, 0, 90));
 }

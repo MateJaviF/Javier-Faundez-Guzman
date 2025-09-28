@@ -13,7 +13,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     transition: filter 0.3s ease;
-
 }
 
 .darkmode {
@@ -412,79 +411,37 @@ body {
     }
 }
 
-
-
-#master3 {
-    width: auto;
-    height: auto;
+#changes {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     display: flex;
-    overflow: hidden;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 
-.changelog {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    width: 300px;
-    color: #fff;
-}
-
-#changelog-title h2 {
+.changes-bottom {
+    background-color: #fff;
+    color: #000000;
     text-align: center;
-    background-color: #00000073;
-    border-start-start-radius: 1pc;
-    border-start-end-radius: 1pc;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 20px;
 }
 
-#changelog-title h2:hover {
+.changes-bottom button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 8px;
+    border-radius: 5px;
     background-color: #000000;
 }
 
-#note-change {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.changelog ul {
-    margin-left: 20px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#change1-0 {
-    /*rgb(170, 0, 160)*/
-    background: linear-gradient(to bottom, rgb(170, 0, 160), rgb(160, 0, 150));
-}
-
-#change1-1 {
-    /*rgb(160, 0, 150)*/
-    background: linear-gradient(to bottom, rgb(160, 0, 150), rgb(150, 0, 140));
-}
-
-#change1-2 {
-    /*rgb(150, 0, 140)*/
-    background: linear-gradient(to bottom, rgb(150, 0, 140), rgb(140, 0, 130));
-}
-
-#change1-3 {
-    /*rgb(140, 0, 130)*/
-    background: linear-gradient(to bottom, rgb(140, 0, 130), rgb(130, 0, 120));
-}
-
-#change1-4 {
-    /*rgb(130, 0, 120)*/
-    background: linear-gradient(to bottom, rgb(130, 0, 120), rgb(120, 0, 110));
-}
-
-#change1-5 {
-    /*rgb(120, 0, 110)*/
-    background: linear-gradient(to bottom, rgb(120, 0, 110), rgb(110, 0, 100));
-}
-
-#change1-6 {
-    /*rgb(110, 0, 100)*/
-    background: linear-gradient(to bottom, rgb(110, 0, 100), rgb(100, 0, 90));
+.changes-bottom button:hover {
+    background-color: #fff;
+    color: #000000;
 }

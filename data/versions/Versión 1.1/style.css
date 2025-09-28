@@ -1,0 +1,250 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    font-family: 'Impact', sans-serif;
+    background-color: black;
+    background-image: url(data/wallpaper.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.nav-bar{
+    background-color: #000000;
+    display: flex;
+    padding: 15px 15px;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+.bar-logo{
+    margin-left: 15px;
+}
+.bar-logo a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 20px;
+   text-transform: uppercase;
+   display: flex;
+   align-items: center;
+   border-radius: 5px;
+}
+.bar-logo a:hover{
+    background-color: #fff;
+    color: #000000;
+}
+.bar-logo i {
+   margin-right: 5px;
+   font-size: 28px;
+   color: #fff;
+}
+.bar-logo h1{
+    font-size: 100%;
+}
+.bar-links {
+   display: flex;
+   gap: 5px;
+   text-align: center;
+}
+.bar-links a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   padding: 8px 8px;
+   border-radius: 5px;
+}
+.bar-links a:hover {
+   background-color: #fff;
+   color: #000000;
+}
+#contenedor{
+    background-color: rgba(105, 105, 105, 0.5);
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#master{
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 20px;
+}
+.card{
+    flex-basis: 60%;
+    order: 1;
+    flex-grow: 200px;
+    margin-top: 10px;
+}
+.cardtop{
+    background-color:  blueviolet;
+    border-radius: 1pc;
+    height: 100px;
+}
+#image-profile{
+    border-radius: 50%;
+    position: absolute;
+    top: -65px;
+    left: calc(50% - 60px);
+    height: auto;
+    width: 125px;
+}
+.cardbottom{
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    border-end-end-radius: 1pc;
+    border-end-start-radius: 1pc;
+    top: -10px;
+}
+.cardbottom h2{
+    font-size: 150%;
+    margin-top: 20px;
+}
+#h2profile{
+    margin-top: 40px;
+}
+.textcard{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.box{
+    height: 500px;
+    flex-basis: 50%;
+    order: 2;
+    margin-top: 10px;
+}
+.skills{
+    background-color: white;
+    border-radius: 1pc;
+    width: auto;
+    height: auto;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.skills h2{
+    text-align: center;
+    padding: 5px;
+}
+.skills ul{
+    margin-left: 25px;
+    padding: 10px;
+}
+.skills a{
+    color: mediumvioletred;
+}
+.skills a:hover{
+    color: #000000;
+    background-color: #ee82ee8e;
+}
+.socialnetworks{
+    background-color: white;
+    border-radius: 1pc;
+    width: auto;
+    height: auto;
+    align-items: center;
+}
+.socialnetworks h2{
+    text-align: center;
+    padding: 5px;
+}
+.socialnetworks-links{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+}
+.socialnetworks-links a{
+    color: #fff;
+   text-decoration: none;
+   font-size: 15px;
+   padding: 8px 8px;
+   border-radius: 5px;
+   background-color: #000000;
+}
+.socialnetworks-links a:hover{
+    background-color: #fff;
+    color: #000000;
+}
+.proyects{
+    flex-basis: 25%;
+    order: 3;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    background-color: #0000007e;
+    border-radius: 1pc;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+.proyects h2, h3, p{
+    padding: 5px;
+}
+.allricopandiv{
+    background-color: white;    
+    border-radius: 1pc;
+    height: auto;
+}
+#allricopanlogo{
+    border-radius: 50%;
+}
+
+
+#master2{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.changelog{
+    background-color: darkmagent;
+    border-radius: 10px;
+    width: 300px;
+    height: 150px;
+    color: #fff;
+}
+.changelog h2{
+    text-align: center;
+    background-color: #00000073;
+    border-start-start-radius: 1pc;
+    border-start-end-radius: 1pc;
+}
+.changelog h2:hover{
+    background-color: #000000;
+}
+.changelog ul{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+#change1-0{
+    background-color: rgb(140, 0, 140);
+}
+#change1-1{
+    background-color: rgb(130, 0, 130);
+}
+@media (max-width: 800px) {
+    #contenedor {
+        flex-direction: column;
+    }
+    #master {
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+}

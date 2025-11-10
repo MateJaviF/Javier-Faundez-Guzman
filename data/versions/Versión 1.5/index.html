@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css-->
+    <link rel="stylesheet" href="data/css/style.css">
+    <!--bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--normalize (compatibilidad)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <!--icon-->
+    <link rel="shortcut icon" href="data/images/icon.png" type="image/x-icon">
+    <!--titulo-->
+    <title>Javier Faúndez Guzmán Página Web</title>
+</head>
+<body>
+<!--Contenido-->
+<div id="contenedor">
+    <div id="master">
+        <div class="masters-titles darkmode">
+            <h2>Sobre mí</h2>
+        </div>
+        <div id="master-container">
+            <div class="master-box1">
+                <div class="cardtop"></div>
+                <div class="cardbottom darkmode">
+                    <img src="data/images/image_profile.jpg" id="image-profile">
+                    <div id="h2profile">
+                        <h2>¡Hola! Soy Javier Esteban Faúndez Guzmán</h2>
+                    </div>
+                    <div class="textcard">
+                        <h2>Sobre mí</h2>
+                        <p>Soy estudiante Técnico en Programación y me encanta aprender varias cosas en el área de programación, soy un trabajador Freelancer y un Desarrollador de Videojuegos, también me encanta la música, y soy Pianista de nivel intermedio.</p>
+                        <a href="#">Mi Curriculum</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="master-box2">
+                <div class="skills darkmode">
+                    <h2>Habilidades</h2>
+                    <ul>
+                        <li>Desarrollo Web (HTML y CSS).</li>
+                        <li>Desarrollo en Música (Pianista).</li>
+                        <li>Programador (JavaScript, JSON, LUA).</li>
+                    </ul>
+                </div>
+                <div class="interests darkmode">
+                    <h2>Intereses</h2>
+                    <ul>
+                        <li>Desarrollo de Videojuegos</li>
+                        <li>Desarrollo en Música (Más instrumentos, FL Studio)</li>
+                        <li>UI/UX Design</li>
+                        <li>Desarrollo Web Full Stack</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="master-box3" class="darkmode">
+                <div class="contacts">
+                    <h2>Contactos</h2>
+                    <div class="contacts-links">
+                        <a href="#">
+                        <i class="bi bi-envelope"></i> Gmail (Escolar)</a>
+                        <a href="#">
+                        <i class="bi bi-envelope"></i> Gmail (Personal)</a>
+                        <a href="#">
+                        <i class="bi bi-linkedin"></i> LinkedIn</a>
+                        <a href="#">
+                        <i class="bi bi-github"></i> GitHub (Escolar)</a>
+                        <a href="#">
+                        <i class="bi bi-github"></i> GitHub (Personal)</a>
+                        <a href="#">
+                        <i class="bi bi-whatsapp"></i> WhatsApp /
+                        <i class="bi bi-telephone"></i> Teléfono</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div id="master2">
+        <div class="masters-titles darkmode">
+            <h2>Proyectos Destacados</h2>
+        </div>
+        <div class="proyects">
+            
+            <div class="allricopan-box darkmode">
+                <h3 class="textthatneedsamargin">Página Web: All Rico Pan [En proceso...]</h3>
+                <p class="textthatneedsamargin">Una página web básica para la panaderia de mi familia.</p>
+                <img src="data/images/AllRicoPanLogo.jpg" height="200px" width="200px" id="allricopanlogo">
+                <a href="#" class="proyects-button">Ir al Sitio</a>
+            </div>
+            <div class="almacebred-box darkmode">
+                <h3 class="textthatneedsamargin">Página Web: Almaceb RED [En estado de BETA]</h3>
+                <p class="textthatneedsamargin">Una página web geografica con diseño de red social (Tiktok).</p>
+                <img src="data/images/AlmacebREDLogo.png" height="200px" width="200px" id="almacebredlogo">
+                <a href="#" class="proyects-button">Ir al Sitio</a>
+            </div>   
+        </div>
+    </div>
+
+
+
+    <div id="changes">
+        <div class="masters-titles darkmode">
+            <h2>Cambios de la actualización</h2>
+        </div>
+        <div class="proyects">
+            <div class="changes-bottom darkmode">
+                <h3>Los cambios ahora están en otra página</h3>
+                <button onclick="window.location.href='data/html/version.html';">Actualizaciones</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Barra de navegación-->
+    
+    <nav id="nav-bar" class="darkmode">
+            <div class="bar-logo">
+                <a href="#">
+                    <i class="bi-person-circle"></i>
+                    <h1>Página de Javier Faúndez Guzmán</h1>
+                </a>
+            </div>
+            <div class="bar-links">
+                <a href="#">Sobre mí</a>
+                <a href="#">Proyectos Destacados</a>
+                <a href="#">Changelog</a>
+            </div>  
+    </nav>
+
+    <!--Dark Mode-->
+
+    <div id="btnToggle" class="darkmode">
+        <button onclick="">🔥</button>
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById('btnToggle');
+    const elementos = document.querySelectorAll('.darkmode');
+    const STORAGE_KEY = "darkmode-activo";
+
+    function toggleDarkMode() {
+        const activo = elementos[0].classList.contains("invertido"); 
+        if (activo) {
+        // Si está activo: desactivar
+        elementos.forEach(el => el.classList.remove("invertido"));
+        localStorage.setItem(STORAGE_KEY, "no");
+        } else {
+        // Si no está activo: activar
+        elementos.forEach(el => el.classList.add("invertido"));
+        localStorage.setItem(STORAGE_KEY, "sí");
+        }
+    }
+
+    btn.addEventListener('click', toggleDarkMode);
+
+    // Save preference API
+    window.addEventListener('DOMContentLoaded', () => {
+        const preferencia = localStorage.getItem(STORAGE_KEY);
+        if (preferencia === "sí") {
+        elementos.forEach(el => el.classList.add("invertido"));
+        }
+    });
+</script>
+</body>
+</html>

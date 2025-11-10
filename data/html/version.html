@@ -1,343 +1,347 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--bootstrap icons-->
+
+    <title>Cambios en la página</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!--normalize (compatibilidad)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <!--icon-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
-    <!--titulo-->
-    <title>Versiones</title>
-    <!--css-->
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        #BG {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        #box-changelog {
-            display: flex;
-            overflow: hidden;
-            align-items: center;
-            justify-content: center;
-            margin-top: 120px;
-        }
-
-        .changelog {
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 1pc;
-            width: 600px;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        #changelog-title h2 {
-            text-align: center;
-            background-color: #ffffff6b;
-            border-start-start-radius: 1pc;
-            border-start-end-radius: 1pc;
-            color: #000;
-        }
-
-        #changelog-title h2:hover {
-            background-color: #ffffff;
-        }
-
-        #note-change {
-            margin-top: 10px;
-            text-align: center;
-            color: #000;
-        }
-
-        .changelog ul {
-            margin-left: 20px;
-            margin-top: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .view {
-            background-color: #ffffff9d;
-            color: #000000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 17px;
-            gap: 7px;
-            border-radius: 25px;
-        }
-
-        .view-version {
-            overflow: hidden;
-        }
-
-        .view-version img {
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
-        }
-
-        .view-version:hover {
-            filter: invert();
-        }
-
-        .noview-version {
-            overflow: hidden;
-        }
-
-        .noview-version img {
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
-        }
-
-        .noview-version:hover {
-            filter: invert();
-        }
-
-        #change1-0 {
-            /*rgb(170, 0, 160)*/
-            background: linear-gradient(to bottom, rgb(170, 0, 160, 0.7), rgb(160, 0, 150, 0.7));
-            border-radius: 15px;
-            padding: 7px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #change1-1 {
-            /*rgb(160, 0, 150)*/
-            background: linear-gradient(to bottom, rgb(160, 0, 150, 0.7), rgb(150, 0, 140, 0.7));
-            border-radius: 15px;
-            padding: 7px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #change1-2 {
-            /*rgb(150, 0, 140)*/
-            background: linear-gradient(to bottom, rgb(150, 0, 140, 0.7), rgb(140, 0, 130, 0.7));
-            border-radius: 15px;
-            padding: 7px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #change1-3 {
-            /*rgb(140, 0, 130)*/
-            background: linear-gradient(to bottom, rgb(140, 0, 130, 0.7), rgb(130, 0, 120, 0.7));
-            border-radius: 15px;
-            padding: 7px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #change1-4 {
-            /*rgb(130, 0, 120)*/
-            background: linear-gradient(to bottom, rgb(130, 0, 120, 0.7), rgb(120, 0, 110, 0.7));
-            border-radius: 15px;
-            padding: 7px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #change1-5 {
-            /*rgb(120, 0, 110)*/
-            background: linear-gradient(to bottom, rgb(120, 0, 110, 0.7), rgb(110, 0, 100, 0.7));
-            border-radius: 15px;
-            padding: 7px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #change1-6 {
-            /*rgb(110, 0, 100)*/
-            background: linear-gradient(to bottom, rgb(110, 0, 100, 0.7), rgb(100, 0, 90, 0.7));
-            border-radius: 15px;
-            padding: 7px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        @media (max-width: 800px) {
-            #box-changelog {
-                margin-top: 155px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/versioncss.css">
 </head>
 <body>
 
-    <!--BG-->
+<!-- Background Video -->
 
-    <video autoplay muted loop preload="auto" id="BG">
-        <source src="../videos/BG-video.mp4" type="video/mp4">
+<video autoplay muted loop preload="auto" id="BG">
+    <source src="../videos/BG-video.mp4" type="video/mp4">
         Tu navegador no soporta videos en HTML5.
-    </video>
+</video>
 
-    <!--Contenido-->
-<div id="contenedor">
-    <div id="box-changelog">
-        <div class="changelog">
-            <div id="changelog-title" class="darkmode">
-                <h2>Cambios de la Actualización</h2>
-            </div>
-            <div id="note-change" class="darkmode">
-                <h2>Notas de la actualización:</h2>
-                <p>Nueva página, yeii.</p>
-                <p>Espera más para la siguiente actualización</p>
-            </div>
-            <div id="change1-0">
-                <h3>Versión 1.0</h3>
-                <ul>
-                    <li>Compatibilidad Móvil (Yippiee).</li>
-                    <li>Rework del código en la página.</li>
-                    <li>Diseño Links de Redes Sociales cambiadas.</li>
-                    <li>Muchos errores arreglados.</li>
-                </ul>
-                <div class="view darkmode">
-                    <h3>Ir a la Versión</h3>
-                    <p>(Click en la imagen)</p>
-                    <a href="../versions/Versión 1.0/index.html" class="view-version">
-                        <img src="../images/old-image-profile.jpeg" alt="V1">
-                    </a>
+<main id="container">
+    <section id="master-changelog">
+        <header 
+        class="box-changelog-titles darkmode" 
+        id="scroll1"
+        data-aos="flip-right"
+        >
+            <h2>Cambios en la Página</h2>
+        </header>
+        <article class="changelog">
+            <div class="boxes">
+                <div 
+                id="change1-0" 
+                class="box-one" 
+                data-aos="fade-up"
+                >
+                    <h3>Versión 1.0</h3>
+                    <ul>
+                        <li>Compatibilidad Móvil (Yippiee).</li>
+                        <li>Rework del código en la página.</li>
+                        <li>Diseño Links de Redes Sociales cambiadas.</li>
+                        <li>Muchos errores arreglados.</li>
+                    </ul>
+                    <p style="text-align: center;"><strong>Fecha:</strong> 4 de Agosto de 2025.</p>
+                </div>
+                <div 
+                id="change1-1" 
+                class="box-two"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                >
+                    <h3>Versión 1.1</h3>
+                    <ul>
+                        <li>Barra de navegación arreglada.</li>
+                        <li>Tarjeta de Usuario arreglada.</li>
+                        <li>Cambios de Actualización por versiones.</li>
+                        <li>Entre otros pequeños detalles.</li>
+                    </ul>
+                    <p style="text-align: center;"><strong>Fecha:</strong> 5 de Agosto de 2025.</p>
                 </div>
             </div>
-            <div id="change1-1">
-                <h3>Versión 1.1</h3>
-                <ul>
-                    <li>Barra de navegación arreglada.</li>
-                    <li>Tarjeta de Usuario arreglada.</li>
-                    <li>Cambios de Actualización por versiones.</li>
-                    <li>Entre otros pequeños detalles.</li>
-                </ul>
-                <div class="view darkmode">
-                    <h3>Ir a la Versión</h3>
-                    <p>(Click en la imagen)</p>
-                    <a href="../versions/Versión 1.1/index.html" class="view-version">
-                        <img src="../images/old-image-profile.jpeg" alt="V1.1">
-                    </a>
+            <div class="boxes">
+                <div 
+                id="change1-2" 
+                class="box-one"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                >
+                    <h3>Versión 1.2</h3>
+                    <ul>
+                        <li>Titulo de la página: Ahora te lleva a mi Curriculum.</li>
+                        <li>Links cambiados.</li>
+                        <li>Tarjeta de Usuario modificada + Curriculum.</li>
+                        <li>Modificación de colores.</li>
+                        <li>Habilidades e intereses separados.</li>
+                        <li>Sección de Proyectos: Interfaz mejorada.</li>
+                        <li>Sección de Proyectos: Almaceb RED añadida.</li>
+                        <li>Entre otros pequeños detalles.</li>
+                    </ul>
+                    <p style="text-align: center;"><strong>Fecha:</strong> 30 de Agosto de 2025.</p>
+                </div>
+                <div 
+                id="change1-3" 
+                class="box-two"
+                data-aos="fade-up"
+                data-aos-delay="150"
+                >
+                    <h3>Versión 1.3</h3>
+                    <ul>
+                        <li>Titulo de "Sobre mí, Habilidades, intereses, Contactos" cambiada</li>
+                        <li>Curriculum actualizado a la última Modificación</li>
+                        <li>Links de la Barra de navegación cambiada (Sin funcionar, aún).</li>
+                        <li>Borrar redes sociales personales.</li>
+                        <li>Habilidades: JSON añadido porque se me olvido ponerlo.</li>
+                        <li>Intereses: + Desarrollo Web Full Stack</li>
+                        <li>Icono de la web añadido.</li>
+                        <li>Titulo de la web ligeramente cambiado.</li>
+                        <li>Divs de proyects destacados modificados.</li>
+                    </ul>
+                    <p style="text-align: center;"><strong>Fecha:</strong> 2 de Septiembre de 2025.</p>
                 </div>
             </div>
-            <div id="change1-2">
-                <h3>Versión 1.2</h3>
-                <ul>
-                    <li>Titulo de la página: Ahora te lleva a mi Curriculum.</li>
-                    <li>Links cambiados.</li>
-                    <li>Tarjeta de Usuario modificada + Curriculum.</li>
-                    <li>Modificación de colores.</li>
-                    <li>Habilidades e intereses separados.</li>
-                    <li>Sección de Proyectos: Interfaz mejorada.</li>
-                    <li>Sección de Proyectos: Almaceb RED añadida.</li>
-                    <li>Entre otros pequeños detalles.</li>
-                </ul>
-                <div class="view darkmode">
-                    <h3>Ir a la Versión</h3>
-                    <p>(Click en la imagen)</p>
-                    <a href="../versions/Versión 1.2/index.html" class="view-version">
-                        <img src="../images/image_profile.jpg" alt="V1.2">
-                    </a>
+            <div class="boxes">
+                <div 
+                id="change1-4" 
+                class="box-one"
+                data-aos="fade-up"
+                >
+                    <h3>Versión 1.4</h3>
+                    <ul>
+                        <li>MODO OSCURO AÑADIDO (Y fijado en la esquina).</li>
+                        <li>+ API para que el modo oscuro se guarde dependiendo que eliges.</li>
+                        <li>Barra de navegación fijada.</li>
+                        <li>Fondos de los cambios de actualización ahora en degradados.</li>
+                        <li>Ahora todos los fondos son blancos a menos que actives el modo oscuro (🔥).</li>
+                        <li>Barra de navegación arreglada.</li>
+                    </ul>
+                    <p style="text-align: center;"><strong>Fecha:</strong> 9 de Septiembre de 2025.</p>
+                </div>
+                <div 
+                id="change1-5" 
+                class="box-two"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                >
+                    <h3>Versión 1.5</h3>
+                    <ul>
+                        <li>Cambios de Actualizaciones cambiado (Ahora está en esta página).</li>
+                        <li>Nuevo diseño del Cambio de Actualizaciones.</li>
+                        <li>Nuevo apartado en la página principal, en donde te lleva aqui.</li>
+                        <li>Al apretar en las imagenes de la versión te lleva a la página correspondiente.</li>
+                        <li>Y unos iconos demás que puse.</li>
+                    </ul>
+                    <p style="text-align: center;"><strong>Fecha:</strong> 14 de Septiembre de 2025.</p>
                 </div>
             </div>
-            <div id="change1-3">
-                <h3>Versión 1.3</h3>
-                <ul>
-                    <li>Titulo de "Sobre mí, Habilidades, intereses, Contactos" cambiada</li>
-                    <li>Curriculum actualizado a la última Modificación</li>
-                    <li>Links de la Barra de navegación cambiada (Sin funcionar, aún).</li>
-                    <li>Borrar redes sociales personales.</li>
-                    <li>Habilidades: JSON añadido porque se me olvido ponerlo.</li>
-                    <li>Intereses: + Desarrollo Web Full Stack</li>
-                    <li>Icono de la web añadido.</li>
-                    <li>Titulo de la web ligeramente cambiado.</li>
-                    <li>Divs de proyects destacados modificados.</li>
-                </ul>
-                <div class="view darkmode">
-                    <h3>Ir a la Versión</h3>
-                    <p>(Click en la imagen)</p>
-                    <a href="../versions/Versión 1.3/index.html" class="view-version">
-                        <img src="../images/icon.png" alt="V1.3">
-                    </a>
+            <div class="boxes">
+                <div 
+                id="change1-6" 
+                class="box-one"
+                data-aos="fade-up"
+                >
+                    <h3>Versión 1.6</h3>
+                    <h4>Cambios de la página</h4>
+                    <ul>
+                        <li>La barra de navegación ahora tiene un nuevo icono y animación cuando la presionas.</li>
+                        <li>Los links de la barra de navegación ahora hacen scroll a la sección que se le estableció.</li>
+                        <li>En movil se esconden los links y al momento de presionar el boton (&#9776;) se muestran.</li>
+                        <li>Nueva foto de perfil en la tarjeta de presentación (Soy yo pero versión 
+                            <a href="https://miiwiki.org/wiki/Mii" class="link-url">Mii</a>).
+                        </li>
+                        <li>Nuevo subtitulo: "Este es mi Curriculum".</li>
+                        <li>La letra de los links de los contactos ahora están en cursiva.</li>
+                        <li>Mis proyectos ahora se dividen en Proyectos Independientes y Proyectos Colaborativos.</li>
+                        <li>Nuevo proyecto Independiente: "Fatamorgana de Amor con Banda de Música".</li>
+                        <li>Y más texto añadido a "All Rico Pan" y "Almaceb RED".</li>
+                        <li>Al entrar en la página de cambios, hay una transición suave en el fondo.</li>
+                        <li>Nuevo diseño en la página de cambios.</li>
+                        <li>Fechas añadidas a cada versión para un mejor seguimiento.</li>
+                        <li>NUEVA SECCIÓN EN LA PÁGINA DE CAMBIOS "Linea de tiempo".</li>
+                        <li>Los portales te mandan a antiguas versiones de la página.</li>
+                        <li>Integre 
+                            <a href="https://michalsnik.github.io/aos/" class="link-url">AOS</a> 
+                            (Animate On Scroll) para animaciones para las dos páginas.
+                        </li>
+                        <li>Simplifiqué el código y mejoré la estructura general en las dos páginas.</li>
+                        <li>Ordene algunas clases para que no se repitan.</li>
+                    </ul>
+                    <h4>Cosas a considerar</h4>
+                    <ul>
+                        <li>Cuando vayas a una versión anterior, los links no estarán disponibles.</li>
+                    </ul>
+                    <p style="text-align: center;"><strong>Fecha:</strong> de Octubre de 2025.</p>
                 </div>
+            <!--<div id="change1-7">
+                    <h3>Versión 1.7</h3>
+                    <ul>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                    </ul>
+                </div>-->
             </div>
-            <div id="change1-4">
-                <h3>Versión 1.4</h3>
-                <ul>
-                    <li>MODO OSCURO AÑADIDO (Y fijado en la esquina).</li>
-                    <li>+ API para que el modo oscuro se guarde dependiendo que eliges.</li>
-                    <li>Barra de navegación fijada.</li>
-                    <li>Fondos de los cambios de actualización ahora en degradados.</li>
-                    <li>Ahora todos los fondos son blancos a menos que actives el modo oscuro (🔥).</li>
-                    <li>Barra de navegación arreglada.</li>
-                </ul>
-                <div class="view darkmode">
-                    <h3>Ir a la Versión</h3>
-                    <p>(Click en la imagen)</p>
-                    <a href="../versions/Versión 1.4/index.html" class="view-version">
-                        <img src="../images/icon.png" alt="V1.4">
-                    </a>
+        <!--<div class="boxes">
+                <div id="change1-8">
+                    <h3>Versión 1.8</h3>
+                    <ul>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                    </ul>
                 </div>
-            </div>
-            <div id="change1-5">
-                <h3>Versión 1.5</h3>
-                <ul>
-                    <li>Cambios de Actualizaciones cambiado (Ahora está en esta página).</li>
-                    <li>Nuevo diseño del Cambio de Actualizaciones.</li>
-                    <li>Nuevo apartado en la página principal, en donde te lleva aqui.</li>
-                </ul>
-                <div class="view darkmode">
-                    <h3>Ya estás en esta Versión</h3>
-                    <a href="#" class="noview-version">
-                    <img src="../images/icon.png" alt="V1.5">
-                </a>
+                <div id="change1-9">
+                    <h3>Versión 1.9</h3>
+                    <ul>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                    </ul>
                 </div>
-            </div>
-        <!--<div id="change1-6">
-                <h3>Versión 1.6</h3>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <a href="../versions/Versión 1.0/index.html" class="view-version">
-                    <img src="../images/cat.png" alt="V1">
-                </a>
             </div>-->
-        </div> 
-    </div>
+        <!--<div class="boxes">
+                <div id="change2-0">
+                    <h3>Versión 2.0</h3>
+                    <ul>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                    </ul>
+                </div>
+            </div>-->
+        </article>
+    </section>
+
+    <section id="master-changelog">
+        <header 
+        class="box-changelog-titles darkmode"
+        id="scroll2"
+        data-aos="flip-right"
+        >
+            <h2>Linea de Tiempo</h2>
+        </header>
+        <article class="changelog">
+            <div class="boxes">
+                <div class="box-one div-cards">
+                    <h3>Versión 1.0</h3>
+                    <div class="portal" data-aos="flip-right">
+                        <img src="../images/portal-mania.gif" alt="portal-sonic-mania" class="portal-image1">
+                        <a href="../versions/Versión 1.0/index.html" class="portal-image2">
+                            <img src="../images/V1-0.jpg" alt="1.0-screenshot" style="width: 180px;border-radius: 50%;">
+                        </a>
+                    </div>
+                    <p>Fecha: 4 de Agosto de 2025</p>
+                </div>
+                <div class="box-two div-cards">
+                    <h3>Versión 1.1</h3>
+                    <div class="portal" data-aos="flip-right">
+                        <img src="../images/portal-mania.gif" alt="portal-sonic-mania" class="portal-image1">
+                        <a href="../versions/Versión 1.1/index.html" class="portal-image2">
+                            <img src="../images/V1-1.jpg" alt="1.1-screenshot" style="width: 180px;border-radius: 50%;">
+                        </a>
+                    </div>
+                    <p>Fecha: 5 de Agosto de 2025</p>
+                </div>
+            </div>
+            <div class="boxes">
+                <div class="box-one div-cards">
+                    <h3>Versión 1.2</h3>
+                    <div class="portal" data-aos="flip-right">
+                        <img src="../images/portal-mania.gif" alt="portal-sonic-mania" class="portal-image1">
+                        <a href="../versions/Versión 1.2/index.html" class="portal-image2">
+                            <img src="../images/V1-2.jpg" alt="1.2-screenshot" style="width: 180px;border-radius: 50%;">
+                        </a>
+                    </div>
+                    <p>Fecha: 30 de Agosto de 2025</p>
+                </div>
+                <div class="box-two div-cards">
+                    <h3>Versión 1.3</h3>
+                    <div class="portal" data-aos="flip-right">
+                        <img src="../images/portal-mania.gif" alt="portal-sonic-mania" class="portal-image1">
+                        <a href="../versions/Versión 1.3/index.html" class="portal-image2">
+                            <img src="../images/V1-3.jpg" alt="1.3-screenshot" style="width: 180px;border-radius: 50%;">
+                        </a>
+                    </div>
+                    <p>Fecha: 2 de Septiembre de 2025</p>
+                </div>
+            </div>
+            <div class="boxes">
+                <div class="box-one div-cards">
+                    <h3>Versión 1.4</h3>
+                    <div class="portal" data-aos="flip-right">
+                        <img src="../images/portal-mania.gif" alt="portal-sonic-mania" class="portal-image1">
+                        <a href="../versions/Versión 1.4/index.html" class="portal-image2">
+                            <img src="../images/V1-4.jpg" alt="1.4-screenshot" style="width: 180px;border-radius: 50%;">
+                        </a>
+                    </div>
+                    <p>Fecha: 9 de Septiembre de 2025</p>
+                </div>
+                <div class="box-two div-cards">
+                    <h3>Versión 1.5</h3>
+                    <div class="portal" data-aos="flip-right">
+                        <img src="../images/portal-mania.gif" alt="portal-sonic-mania" class="portal-image1">
+                        <a href="../versions/Versión 1.5/index.html" class="portal-image2">
+                            <img src="../images/V1-5.jpg" alt="1.5-screenshot" style="width: 180px;border-radius: 50%;">
+                        </a>
+                    </div>
+                    <p>Fecha: 14 de Septiembre de 2025</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Sección Volver -->
+    <footer id="changes">
+        <header class="masters-titles darkmode">
+            <h2>Volver a la página</h2>
+        </header>
+        <div class="master2-box1" data-aos="fade-up">
+            <div 
+            class="changes-bottom darkmode" 
+            data-aos="flip-left" 
+            data-aos-easing="ease-out-cubic" 
+            data-aos-duration="800"
+            >
+                <h3>(Texto para que aparezca el botón)</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Magnam corrupti, voluptate ipsum accusantium laborum placeat 
+                    itaque nulla dolorum ipsa dolorem praesentium tempore beatae 
+                    facilis, optio amet quae fugit! Inventore, obcaecati?</p>
+                <a href="javascript:history.back()" class="links">Volver</a>
+            </div>
+        </div>
+    </footer>
 
     <!--Barra de navegación-->
 
     <nav id="nav-bar" class="darkmode">
-        <div class="bar-logo">
-            <a href="../pdf/Curriculum - JEFG.pdf">
-                <i class="bi-person-circle"></i>
-                <h1>Página de Javier Faúndez Guzmán</h1>
+        <div id="nav-logo">
+            <a href="data/pdf/Curriculum - JEFG.pdf">
+                <div id="nav-images" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000" >
+                    <img src="../images/icon.png" alt="icon" height="80px">
+                    <img src="../images/icondanger.png" alt="icondanger" class="abs-images" height="80px">
+                </div>
+                <h1>Pág. Web de presentación: Javier Faúndez Guzmán</h1>
             </a>
         </div>
-        <div class="bar-links">
+        <button id="nav-toggle" aria-label="Abrir menú">&#9776;</button>
+        <div id="nav-links" class="nav-links">
+            <a href="#scroll1" id="btn-scroll1">Cambios</a>
+            <a href="#scroll2" id="btn-scroll2">Lineamientos</a>
             <a href="javascript:history.back()">Volver</a>
         </div>
     </nav>
@@ -347,34 +351,14 @@
     <div id="btnToggle" class="darkmode">
         <button onclick="">🔥</button>
     </div>
-</div>
-    <script>
-    const btn = document.getElementById('btnToggle');
-    const elementos = document.querySelectorAll('.darkmode');
-    const STORAGE_KEY = "darkmode-activo";
+</main>
 
-    function toggleDarkMode() {
-        const activo = elementos[0].classList.contains("invertido"); 
-        if (activo) {
-        // Si está activo: desactivar
-        elementos.forEach(el => el.classList.remove("invertido"));
-        localStorage.setItem(STORAGE_KEY, "no");
-        } else {
-        // Si no está activo: activar
-        elementos.forEach(el => el.classList.add("invertido"));
-        localStorage.setItem(STORAGE_KEY, "sí");
-        }
-    }
-
-    btn.addEventListener('click', toggleDarkMode);
-
-    // Save preference API
-    window.addEventListener('DOMContentLoaded', () => {
-        const preferencia = localStorage.getItem(STORAGE_KEY);
-        if (preferencia === "sí") {
-        elementos.forEach(el => el.classList.add("invertido"));
-        }
-    });
+<!--JavaScript-->
+<script src="../js/script.js"></script>
+<script src="../js/scriptV.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 </body>
 </html>

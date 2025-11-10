@@ -1,0 +1,447 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+    font-family: 'Impact', sans-serif;
+    background-color: black;
+    background-image: url(../images/BG.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: filter 0.3s ease;
+}
+
+.darkmode {
+    transition: filter 0.3s ease;
+}
+
+    /* Cuando está activo el modo oscuro, solo los elementos con clase "darkmode" se invierten */
+.darkmode.invertido {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+    /* Si quieres que imágenes dentro de .darkmode no se vean raras */
+.darkmode.invertido img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+#btnToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    z-index: 9999; 
+}
+
+#btnToggle button {
+    padding: 10px 10px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#nav-bar {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    padding: 10px 10px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bar-logo {
+    margin-left: 15px;
+}
+
+.bar-logo a {
+   color: #000000;
+   text-decoration: none;
+   font-size: 20px;
+   text-transform: uppercase;
+   display: flex;
+   align-items: center;
+   border-radius: 5px;
+   gap: 5px;
+   overflow: hidden;
+}
+
+.bar-logo a:hover {
+    background-color: #fff;
+    filter: invert(1);
+}
+
+.bar-logo i {
+   margin-right: 5px;
+   font-size: 28px;
+   color: #000000;
+}
+
+.bar-logo h1 {
+    font-size: 100%;
+}
+
+.bar-links {
+   display: flex;
+   overflow: hidden;
+   gap: 5px;
+   text-align: center;
+   align-items: center;
+}
+
+.bar-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 8px;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+
+.bar-links a:hover {
+    background-color: #fff;
+    filter: invert(1);
+}
+
+
+
+#contenedor {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#master {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 120px;
+    border-radius: 10px;
+}
+
+.masters-titles {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px 10px;
+}
+#master-container {
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+    padding: 10px 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.master-box1 {
+    flex-basis: 50%;
+    order: 1;
+    flex-grow: 200px;
+    margin-top: 10px;
+}
+
+.cardtop {
+    background: linear-gradient(to top, darkmagenta, darkviolet);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    height: 100px;
+}
+
+#image-profile {
+    border-radius: 50%;
+    position: absolute;
+    top: -65px;
+    left: calc(50% - 60px);
+    height: auto;
+    width: 125px;
+}
+
+.cardbottom {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    border-end-end-radius: 2pc;
+    border-end-start-radius: 2pc;
+    top: -10px;
+}
+
+.cardbottom h2 {
+    font-size: 150%;
+    margin-top: 20px;
+}
+
+#h2profile {
+    margin-top: 40px;
+}
+
+.textcard {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.textcard a {
+    padding: 5px 15px;
+    background-color: purple;
+    color: white;
+    border: 1px solid mediumvioletred;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.textcard a:hover {
+    background-color: darkviolet;
+    opacity: 0.8;
+}
+
+#master-box2 {
+    flex-basis: 30%;
+    order: 2;
+    margin-top: 10px;
+}
+
+.skills {
+    background-color: white;
+    border-radius: 1pc;
+    width: auto;
+    height: auto;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skills h2 {
+    text-align: center;
+    padding: 5px;
+}
+
+.skills ul {
+    margin-left: 15px;
+    padding: 10px;
+}
+
+.skills a {
+    color: mediumvioletred;
+}
+
+.skills a:hover {
+    color: #000000;
+    background-color: #ee82ee8e;
+}
+
+.interests {
+    background-color: white;
+    border-radius: 1pc;
+    width: auto;
+    height: auto;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.interests h2 {
+    text-align: center;
+    padding: 5px;
+}
+
+.interests ul {
+    margin-left: 15px;
+    padding: 10px;
+}
+
+.interests a {
+    color: mediumvioletred;
+}
+
+#master-box3 {
+    flex-basis: 35%;
+    order: 3;
+}
+
+.contacts {
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.contacts h2 {
+    text-align: center;
+    padding: 5px;
+}
+
+.contacts-links {
+    display: flex;
+    overflow: hidden;
+    gap: 10px;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.contacts-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+.contacts-links a:hover {
+    background-color: #fff;
+    color: #000000;
+}
+
+@media (max-width: 800px) {
+    #master {
+        margin-top: 155px;
+    }
+    #contenedor {
+        flex-direction: column;
+    }
+    #master-container {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    #nav-bar {
+        flex-direction: column;
+    }
+    #master-container {
+        align-items: normal;
+    }
+}
+
+
+
+#master2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.proyects {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 20px;
+}
+
+.proyects h2, h3, p {
+    padding: 5px;
+}
+
+.allricopan-box {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffff;
+    border-radius: 10px;
+    order: 1;
+    flex-basis: 50%;
+    max-width: 400px;
+}
+
+#allricopanlogo {
+    border-radius: 50%;
+}
+
+.almacebred-box {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffff;   
+    border-radius: 10px;
+    order: 2;
+    flex-basis: 50%;
+    max-width: 400px;
+}
+
+.proyects-button {
+    background-color: mediumvioletred;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.proyects-button:hover {
+    background-color: darkviolet;
+}
+
+@media (max-width: 800px) {
+    .proyects {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#changes {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.changes-bottom {
+    background-color: #fff;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 20px;
+}
+
+.changes-bottom button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+.changes-bottom button:hover {
+    background-color: #fff;
+    color: #000000;
+}

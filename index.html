@@ -1,45 +1,54 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--css-->
+    <meta name="description" content="Portafolio profesional de Javier Faúndez Guzmán - Desarrollador Web y Programador">
+    <meta name="keywords" content="desarrollo web, programación, portafolio, HTML, CSS, JavaScript">
+
+    <title>Javier Faúndez Guzmán Web</title>
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="data/css/style.css">
-    <!--bootstrap icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!--normalize (compatibilidad)-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <!--icon-->
-    <link rel="shortcut icon" href="data/images/icon.png" type="image/x-icon">
-    <!--titulo-->
-    <title>Javier Faúndez Guzmán Página Web</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="shortcut icon" href="data/images/icondanger.png" type="image/x-icon">
 </head>
 <body>
-<!--Contenido-->
-<div id="contenedor">
-    <div id="master">
-        <div class="masters-titles darkmode">
+
+<main id="container">
+    <!-- Sección Sobre mí -->
+    <section id="master">
+        <header class="masters-titles darkmode" id="scroll1">
             <h2>Sobre mí</h2>
-        </div>
+        </header>
         <div id="master-container">
-            <div class="master-box1">
+            <article class="master-box1" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1700">
                 <div class="cardtop"></div>
                 <div class="cardbottom darkmode">
-                    <img src="data/images/image_profile.jpg" id="image-profile">
+                    <img data-aos="zoom-in" data-aos-delay="200" src="data/images/PFP2.jpg" id="image-profile">
                     <div id="h2profile">
-                        <h2>¡Hola! Soy Javier Esteban Faúndez Guzmán</h2>
+                        <h2 data-aos="zoom-in" data-aos-delay="400">¡Hola! Yo soy Javier Esteban Faúndez Guzmán</h2>
                     </div>
                     <div class="textcard">
-                        <h2>Sobre mí</h2>
-                        <p>Soy estudiante Técnico en Programación y me encanta aprender varias cosas en el área de programación, soy un trabajador Freelancer y un Desarrollador de Videojuegos, también me encanta la música, y soy Pianista de nivel intermedio.</p>
-                        <a href="data/pdf/Curriculum - JEFG.pdf">Mi Curriculum</a>
+                        <h2 data-aos="zoom-out-up" data-aos-delay="700">Sobre mí</h2>
+                        <p data-aos="flip-up" data-aos-delay="900">
+                            Soy estudiante de la carrera Técnico en Programación y tengo un gran 
+                            interés en ampliar mis conocimientos en el área del desarrollo de software. 
+                            Actualmente, me desempeño como trabajador freelancer y desarrollador de videojuegos. 
+                            Además, la música es una de mis pasiones, y cuento con un nivel intermedio en la interpretación del piano.
+                        </p>
+                        <h2 data-aos="flip-left" data-aos-delay="200">Este es mi Curriculum</h2>
+                        <button onclick="window.open('data/pdf/Curriculum - JEFG.pdf')" class="btns" data-aos="zoom-in" data-aos-delay="400">
+                            Curriculum
+                        </button>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <div id="master-box2">
-                <div class="skills darkmode">
+                <div class="skills darkmode" data-aos="fade-down" data-aos-easing="ease-in-sine">
                     <h2>Habilidades</h2>
                     <ul>
                         <li>Desarrollo Web (HTML y CSS).</li>
@@ -47,126 +56,260 @@
                         <li>Programador (JavaScript, JSON, LUA).</li>
                     </ul>
                 </div>
-                <div class="interests darkmode">
+                <div class="interests darkmode" data-aos="fade-up" data-aos-easing="ease-in-sine">
                     <h2>Intereses</h2>
                     <ul>
-                        <li>Desarrollo de Videojuegos</li>
-                        <li>Desarrollo en Música (Más instrumentos, FL Studio)</li>
-                        <li>UI/UX Design</li>
-                        <li>Desarrollo Web Full Stack</li>
+                        <li>Desarrollo de Videojuegos.</li>
+                        <li>Desarrollo en Música (Más instrumentos, FL Studio).</li>
+                        <li>UI/UX Design.</li>
+                        <li>Desarrollo Web Full Stack.</li>
                     </ul>
                 </div>
             </div>
-            <div id="master-box3" class="darkmode">
+            <div id="master-box3" class="darkmode" data-aos="zoom-in" data-aos-easing="ease-in-sine">
                 <div class="contacts">
                     <h2>Contactos</h2>
                     <div class="contacts-links">
-                        <a href="mailto:javierfaundezguzman@alumnos.sip.cl">
-                        <i class="bi bi-envelope"></i> Gmail (Escolar)</a>
-                        <a href="mailto:holajav.oficial@gmail.com">
-                        <i class="bi bi-envelope"></i> Gmail (Personal)</a>
-                        <a href="https://www.linkedin.com/in/javier-faundez-guzman-123456789/">
-                        <i class="bi bi-linkedin"></i> LinkedIn</a>
-                        <a href="https://github.com/MateJaviF">
-                        <i class="bi bi-github"></i> GitHub (Escolar)</a>
-                        <a href="https://github.com/Mutinelo">
-                        <i class="bi bi-github"></i> GitHub (Personal)</a>
-                        <a href="tel:+56932888121">
-                        <i class="bi bi-whatsapp"></i> WhatsApp /
-                        <i class="bi bi-telephone"></i> Teléfono</a>
+                        <a href="mailto:javierfaundezguzman@alumnos.sip.cl" data-aos="fade-right">
+                            <i class="bi bi-envelope"> Gmail (Escolar)</i>
+                        </a>
+                        <a href="mailto:holajav.oficial@gmail.com" data-aos="fade-right">
+                            <i class="bi bi-envelope"> Gmail (Personal)</i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/javier-fa%C3%BAndez-guzm%C3%A1n-413236379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" data-aos="fade-right">
+                            <i class="bi bi-linkedin"> LinkedIn</i>
+                        </a>
+                        <a href="https://github.com/MateJaviF" data-aos="fade-right">
+                            <i class="bi bi-github"> GitHub (Escolar)</i>
+                        </a>
+                        <a href="https://github.com/Mutinelo" data-aos="fade-right">
+                            <i class="bi bi-github"> GitHub (Personal)</i>
+                        </a>
+                        <a href="tel:+56932888121" data-aos="fade-right">
+                            <i class="bi bi-whatsapp"> WhatsApp /</i>
+                            <i class="bi bi-telephone"> Teléfono</i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        
-    </div>
+    </section>
 
-
-    <div id="master2">
-        <div class="masters-titles darkmode">
+    <!-- Sección Proyectos -->
+    <section id="master2">
+        <header class="masters-titles darkmode" id="scroll2">
             <h2>Proyectos Destacados</h2>
+        </header>
+        <div class="master2-boxtitles darkmode" data-aos="flip-right">
+            <h2>Proyectos Independientes</h2>
         </div>
-        <div class="proyects">
-            
-            <div class="allricopan-box darkmode">
-                <h3 class="textthatneedsamargin">Página Web: All Rico Pan [En proceso...]</h3>
-                <p class="textthatneedsamargin">Una página web básica para la panaderia de mi familia.</p>
-                <img src="data/images/AllRicoPanLogo.jpg" height="200px" width="200px" id="allricopanlogo">
-                <a href="#" class="proyects-button">Ir al Sitio</a>
+        <div class="master2-box1">
+            <div class="proyects-boxs darkmode">
+                <h3 class="margin-b-15px">Página Web: All Rico Pan [En proceso...]</h3>
+                <h3>¿Qué es?</h3>
+                <p class="margin-b-15px">Una página web básica para la panaderia de mi familia.</p>
+                <p>
+                    Quiero que se puedan ver los productos que 
+                    ofrecemos, horarios, eventos, y casi todo 
+                    lo relacionado con nuestra panadería.
+                </p>
+                <h3>¿Quiénes somos?</h3>
+                <p class="margin-b-15px">
+                    "Somos una panadería familiar ubicada a pasos 
+                    del metro Estación San Ramón. Estamos orgullosos 
+                    de ser la opción favorita de nuestros vecinos 
+                    a la hora de la oncesita, o para reunirse con 
+                    amigos, tomar un café y disfrutar de un rico 
+                    pastel recién preparado. ¡Visítanos hoy mismo!".
+                </p>
+                <h3>¿Dónde encontrarnos?</h3>
+                <p>
+                    <a href="https://maps.app.goo.gl/YfoY7HnRTj7yJmWE8" class="link-url">
+                        Av. Goycolea 1861, Santiago, San Ramón, 
+                        Santiago, Región Metropolitana
+                    </a>
+                </p>
+                <figure class="margin-b-15px" data-aos="flip-left" style="border-radius: 50%;">
+                    <img
+                        src="data/images/AllRicoPanLogo.jpg"
+                        alt="Logo de All Rico Pan"
+                        width="200" height="200"
+                        loading="lazy"
+                        decoding="async"
+                        style="max-width:100%;height:auto;display:block;border-radius: 50%;"
+                    >
+                </figure>
+                <button class="btns">[No disponible]</button>
             </div>
-            <div class="almacebred-box darkmode">
-                <h3 class="textthatneedsamargin">Página Web: Almaceb RED [En estado de BETA]</h3>
-                <p class="textthatneedsamargin">Una página web geografica con diseño de red social (Tiktok).</p>
-                <img src="data/images/AlmacebREDLogo.png" height="200px" width="200px" id="almacebredlogo">
-                <a href="https://matejavif.github.io/Almaceb-Pagina-Web/" class="proyects-button">Ir al Sitio</a>
-            </div>   
+            <div class="proyects-boxs darkmode">
+                <h3 class="margin-b-15px">Plan Lector: Fatamorgana de Amor con Banda de Música</h3>
+                <h3>¿Qué objetivo tiene?</h3>
+                <p class="margin-b-15px">
+                    Este portafolio literario tiene como objetivo 
+                    analizar y presentar de forma completa la novela 
+                    “Fatamorgana de amor con banda de música”, 
+                    escrita por el autor chileno Hernán Rivera Letelier. 
+                    La obra fue publicada en 1998 y se enmarca dentro 
+                    del realismo mágico, un estilo que combina lo 
+                    cotidiano con lo fantástico, ambientado en 
+                    el árido y misterioso desierto de Atacama.
+                </p>
+                <h3>Resumen</h3>
+                <p class="margin-b-10px">
+                    La historia narra la vida de una banda de músicos ambulantes que viaja por 
+                    las oficinas salitreras del norte de Chile tocando en fiestas, funerales y 
+                    celebraciones. El grupo llega un día a la oficina llamada Quebrada Seca, 
+                    donde el trompetista Bello Sandalio conoce a una misteriosa mujer conocida 
+                    como La Novia del Desierto.
+                </p>
+                <p class="margin-b-10px">
+                    Desde ese momento, surge entre ambos un amor intenso y casi irreal. 
+                    La mujer parece ser más una aparición que una persona real, una especie de 
+                    espejismo que simboliza la ilusión del amor imposible. A medida que la 
+                    historia avanza, el protagonista se sumerge en un sentimiento tan profundo 
+                    que roza la locura, confundiendo la realidad con la fantasía en medio del 
+                    silencio y la inmensidad del desierto.
+                </p>
+                <p class="margin-b-15px">
+                    La novela combina elementos de humor, tragedia y poesía, mostrando la dura 
+                    vida de los habitantes del norte chileno, pero también la riqueza emocional y
+                    espiritual que pueden tener los lugares más solitarios del mundo.
+                </p>
+                <figure class="margin-b-15px" data-aos="flip-left">
+                    <img
+                        src="data/images/FatamorganaPortada.jpg"
+                        alt="Portada de Fatamorgana de Amor con Banda de Música"
+                        width="200" height="250"
+                        loading="lazy"
+                        decoding="async"
+                        style="max-width:100%;height:auto;display:block;"
+                    >
+                </figure>
+                <button class="btns" onclick="window.open('https://matejavif.github.io/fatamorgana-plan-lector/')">
+                    Ir al Sitio
+                </button>
+            </div>
         </div>
-    </div>
-
-
-
-    <div id="changes">
-        <div class="masters-titles darkmode">
-            <h2>Cambios de la actualización</h2>
+        <div class="master2-boxtitles darkmode" data-aos="flip-right">
+            <h2>Proyectos Colaborativos</h2>
         </div>
-        <div class="proyects">
-            <div class="changes-bottom darkmode">
+        <div class="master2-box2">
+            <div class="proyects-boxs darkmode">
+                <h3 class="margin-b-15px">Página Web: Almaceb RED [BETA]</h3>
+                <h3>¿Qué es?</h3>
+                <p class="margin-b-15px">
+                    Este es un proyecto creado por alumnos que están 
+                    aprendiendo HTML, CSS y JS. Esté proyecto tiene por 
+                    objetivo crear una página web con una interfaz similar 
+                    a Tiktok, pero que solo permita encontrar lugares para 
+                    poder comprar con una tarjeta llamada JUNAEB, que es un 
+                    apoyo economico para los estudiantes.
+                </p>
+                <h3>¿Qué tenemos a futuro?</h3>
+                <p class="margin-b-15px">
+                    Tenemos pensado en un futuro seguir mejorando esta 
+                    página web y hacerla algo más grande que solo una "demostración".
+                </p>
+                <h3>Colaboradores:</h3>
+                <ul class="margin-b-15px">
+                    <li class="margin-b-10px">
+                        Catalina Caripan. - Directora del proyecto.
+                    </li>
+                    <li class="margin-b-10px">
+                        Javier Faúndez G. - Desarrollador Web (Pág: Principal, Reportes, Galería, Favoritos y Negocios).
+                    </li>
+                    <li class="margin-b-10px">
+                        Hugo Torres L. - Desarrollador Web (Pág: Ajustes).
+                    </li>
+                    <li class="margin-b-10px">
+                        José Moena R. - Desarrollador Web (Pág: Información).
+                    </li>
+                    <li class="margin-b-10px">
+                        Jorge "Anthony" Parra A. - Desarrollador Web (Pág: Promociones).
+                    </li>
+                </ul>
+                <h3>Portafolios:</h3>
+                <ul class="links-div">
+                    <a href="https://huantolu.github.io/Hugo-Torres-Luna/" data-aos="fade-right">
+                        <li>
+                            <i class="bi bi-person-circle"></i> Hugo Torres L.
+                        </li>
+                    </a>
+                    <a href="https://tezk0.github.io/repo-pagpersonal/" data-aos="fade-right">
+                        <li>
+                            <i class="bi bi-person-circle"></i> José Moena R.
+                        </li>
+                    </a>
+                </ul>
+                <p>
+                    (Queda aclarar que no todas las páginas de 
+                    mis compañeros van a un contexto formal)
+                </p>
+                <figure class="margin-b-15px" data-aos="flip-left">
+                    <img
+                        src="data/images/AlmacebREDLogo.png"
+                        alt="Logo de Almaceb RED"
+                        width="200" height="200"
+                        loading="lazy"
+                        decoding="async"
+                        style="max-width:100%;height:auto;display:block;"
+                    >
+                </figure>
+                <button onclick="window.open('https://matejavif.github.io/Almaceb-Pagina-Web/')" class="btns">
+                    Ir al Sitio
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cambios -->
+    <footer id="changes">
+        <header class="masters-titles darkmode">
+            <h2>Cambios de la página</h2>
+        </header>
+        <div class="master2-box1" data-aos="fade-up">
+            <div class="changes-bottom darkmode" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                <p>(Nota de la 1.5)</p>
                 <h3>Los cambios ahora están en otra página</h3>
-                <button onclick="window.location.href='data/html/version.html';">Actualizaciones</button>
+                <a href="data/html/version.html" class="links">Ver Cambios</a>
             </div>
         </div>
-    </div>
+    </footer>
 
     <!--Barra de navegación-->
     
     <nav id="nav-bar" class="darkmode">
-            <div class="bar-logo">
-                <a href="data/pdf/Curriculum - JEFG.pdf">
-                    <i class="bi-person-circle"></i>
-                    <h1>Página de Javier Faúndez Guzmán</h1>
-                </a>
-            </div>
-            <div class="bar-links">
-                <a href="#">Sobre mí</a>
-                <a href="#">Proyectos Destacados</a>
-                <a href="#">Changelog</a>
-            </div>  
+        <div id="nav-logo">
+            <a href="data/pdf/Curriculum - JEFG.pdf">
+                <div id="nav-images" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000" >
+                    <img src="data/images/icon.png" alt="icon" height="80px">
+                    <img src="data/images/icondanger.png" alt="icondanger" class="abs-images" height="80px">
+                </div>
+                <h1>Portafolio: Javier Faúndez Guzmán</h1>
+            </a>
+        </div>
+        <button id="nav-toggle" aria-label="Abrir menú" class="nav-toggle">
+            <span class="hamburger">&#9776;</span>
+        </button>
+        <div id="nav-links" class="nav-links">
+            <a href="#scroll1" id="link-sobre-mi">Sobre mí</a>
+            <a href="#scroll2" id="link-proyectos">Proyectos</a>
+            <a href="#changes" id="link-changelog">Cambios</a>
+        </div>
     </nav>
 
-    <!--Dark Mode-->
+    <!--Dark Mode Toggle-->
 
     <div id="btnToggle" class="darkmode">
-        <button onclick="">🔥</button>
+        <button>🔥</button>
     </div>
-</div>
+</main>
 
+<!-- Scripts -->
+<script src="data/js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    const btn = document.getElementById('btnToggle');
-    const elementos = document.querySelectorAll('.darkmode');
-    const STORAGE_KEY = "darkmode-activo";
-
-    function toggleDarkMode() {
-        const activo = elementos[0].classList.contains("invertido"); 
-        if (activo) {
-        // Si está activo: desactivar
-        elementos.forEach(el => el.classList.remove("invertido"));
-        localStorage.setItem(STORAGE_KEY, "no");
-        } else {
-        // Si no está activo: activar
-        elementos.forEach(el => el.classList.add("invertido"));
-        localStorage.setItem(STORAGE_KEY, "sí");
-        }
-    }
-
-    btn.addEventListener('click', toggleDarkMode);
-
-    // Save preference API
-    window.addEventListener('DOMContentLoaded', () => {
-        const preferencia = localStorage.getItem(STORAGE_KEY);
-        if (preferencia === "sí") {
-        elementos.forEach(el => el.classList.add("invertido"));
-        }
-    });
+  AOS.init();
 </script>
 </body>
 </html>
